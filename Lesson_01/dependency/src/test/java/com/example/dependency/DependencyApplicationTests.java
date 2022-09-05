@@ -1,10 +1,10 @@
-package com.example.dependencydemo;
+package com.example.dependency;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DependencyDemoApplicationTests {
+class DependencyApplicationTests {
 
 	@Test
 	void contextLoads() {

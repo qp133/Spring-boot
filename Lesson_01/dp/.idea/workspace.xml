@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d21ff782-74fa-4ef4-a528-2896957282b5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="4a1b79f9-d90d-428a-8908-66b5422b435d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../dependency-demo/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dependency/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dependency/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dependency/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dependency/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dependency/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dependency/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dependency/src/main/java/com/example/dependency/DependencyApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dependency/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dependency/src/test/java/com/example/dependency/DependencyApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +24,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2ELrSvlhj9Uxh6w75itYK4IXrCp" />
+  <component name="ProjectId" id="2ELrvw6sCAPbVpGm2l3aztbO500" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,12 +40,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d21ff782-74fa-4ef4-a528-2896957282b5" name="Changes" comment="" />
-      <created>1662385710796</created>
+      <changelist id="4a1b79f9-d90d-428a-8908-66b5422b435d" name="Changes" comment="" />
+      <created>1662385941296</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1662385710796</updated>
-      <workItem from="1662385712162" duration="81000" />
+      <updated>1662385941296</updated>
+      <workItem from="1662385942934" duration="542000" />
     </task>
     <servers />
   </component>

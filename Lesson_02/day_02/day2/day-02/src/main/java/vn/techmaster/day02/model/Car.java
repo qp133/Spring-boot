@@ -1,4 +1,4 @@
-package vn.techmaster.day02;
+package vn.techmaster.day02.model;
 
 public class Car {
     private String brand;
@@ -18,5 +18,13 @@ public class Car {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    public Car(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
+    }
+
+    public Car() {
     }
 }

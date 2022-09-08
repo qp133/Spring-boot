@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a1b79f9-d90d-428a-8908-66b5422b435d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../dependency-demo/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dependency/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dependency/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dependency/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dependency/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dependency/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dependency/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dependency/src/main/java/com/example/dependency/DependencyApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dependency/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dependency/src/test/java/com/example/dependency/DependencyApplicationTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lesson_02/day_02/HW/HW/HW_Lesson_2/src/main/java/com/example/hw_lesson_2/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lesson_02/day_02/HW/HW/HW_Lesson_2/src/main/java/com/example/hw_lesson_2/entity/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lesson_02/day_02/HW/HW/HW_Lesson_2/src/main/java/com/example/hw_lesson_2/repository/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lesson_02/day_02/HW/HW/HW_Lesson_2/src/main/resources/static/book.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lesson_02/day_02/day2/day-02/src/main/java/vn/techmaster/day02/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lesson_02/day_02/day2/day-02/src/main/java/vn/techmaster/day02/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lesson_02/day_02/day2/day-02/src/main/java/vn/techmaster/day02/repository/CarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lesson_02/day_02/day2/day-02/src/main/java/vn/techmaster/day02/repository/CarRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,13 +26,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="dp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="dp" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -46,6 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1662385941296</updated>
       <workItem from="1662385942934" duration="542000" />
+      <workItem from="1662634423661" duration="13000" />
     </task>
     <servers />
   </component>

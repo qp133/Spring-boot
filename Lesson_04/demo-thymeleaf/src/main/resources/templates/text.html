@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Demo</title>
+</head>
+<body>
+    <h1>Information of employee</h1>
+    <ul>
+        <li th:text="${person.name}"></li>
+        <li th:text="${person.nationality}"></li>
+        <li th:text="${person.birthdate}"></li>
+        <li th:text="${person.gender}"></li>
+    </ul>
+    <div th:utext="${message}"></div>
+    <div th:text="${person}"></div>
+</body>
+</html>

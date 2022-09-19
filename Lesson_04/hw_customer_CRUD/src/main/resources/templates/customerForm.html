@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="home::Heading"></head>
+<body>
+<div class="container">
+    <h1 class="text-center">Personal Information Form</h1>
+    <form th:action="@{/post}" method="POST" th:object="${customer}">
+        <input type="hidden" placeholder="id" th:field="*{id}"/><br><br>
+        <div class="form-group" style="margin-bottom: 20px">
+            <label for="name"> Full Name </label>
+            <input type="text" name="name" id="name" th:field="*{fullname}">
+        </div>
+        <div class="form-group" style="margin-bottom: 20px">
+            <label for="email">Email &nbsp &nbsp &nbsp &nbsp</label>
+            <input type="text" name="email" id="email" th:field="*{email}">
+        </div>
+        <div class="form-group" style="margin-bottom: 20px">
+            <label for="telePhone">Number</label>
+            <input type="text" name="telePhone" id="telePhone" th:field="*{number}">
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>
+

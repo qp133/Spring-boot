@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="index::Heading">
+</head>
+<body>
+<div class="container">
+  <div class="card text-white bg-primary my-auto mx-auto" style="max-width: 50rem;">
+    <div class="card-header">
+      <h1  th:text="${car.id}"></h1>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title" th:text="|Email:${car.brand}|"></h5>
+      <p class="card-text" th:text="|Phone: ${car.manufacturer}|"></p>
+      <p class="card-text" th:text="|Phone: ${car.photo}|"></p>
+      <a th:href="@{'/customer/edit/' + ${car.id}}" class="btn btn-primary">Edit</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

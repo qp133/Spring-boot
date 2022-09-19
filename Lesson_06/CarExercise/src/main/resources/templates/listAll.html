@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="index::Heading"></head>
+<body>
+<div class="container" >
+  <div class="row">
+    <a th:href="@{/}" class="col-sm-2">Back</a>
+    <h3 class="col-sm-6" >List of Cars</h3>
+  </div>
+
+  <div class="row my-3">
+    <form th:action="@{/search}" method="get">
+      <div class="col-6 d-flex">
+        <button type="submit" class="btn btn-primary mx-3">Search</button>
+        <input type="text" placeholder="type brand here" name="brand"/><br><br>
+      </div>
+    </form>
+  </div>
+  <table class="table">
+    <thead>
+    <th>Id</th>
+    <th >Brand</th>
+    <th>Manufacturer</th>
+    <th>Photo</th>
+    <th>Action</th>
+    </thead>
+    <tbody>
+    <tr th:each="car,iStat:${cars}">
+      <td th:text="${car.id}"></td>
+      <td th:text="${car.brand}"></td>
+      <td th:text="${car.manufacturer}"></td>
+      <td>
+        <img th:src="@{/photo/{name}.jpg(name=${car.photo})}" width="300px" height="200px">
+      </td>
+      <td>
+        <span>
+          <a th:href="@{/listAll/{id}(id=${car.id})}">Infor</a>
+        </span>&nbsp; &nbsp;
+        <span>
+          <a th:href="@{/customer/edit/{id}(id=${car.id})}" >Edit</a>
+        </span>&nbsp; &nbsp;
+        <span>
+          <a th:href="@{/customer/delete/{id}(id=${car.id})}">Delete</a>
+        </span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

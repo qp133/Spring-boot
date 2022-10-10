@@ -79,7 +79,7 @@ public class CarController {
     }
 
     @GetMapping("/search")
-    public String searchCar(HttpServletRequest request, Model model) {
+    public String searchProduct(HttpServletRequest request, Model model) {
         String brand = request.getParameter("brand");
         if (Objects.equals(brand, "")) {
             model.addAttribute("cars", carRepo.getAll());

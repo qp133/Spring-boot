@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head th:replace ="template::Heading">
+    <title>Index</title>
+</head>
+<body>
+    <div th:replace="template::menu"></div>
+    <div style="padding: 0 150px">
+        <form th:action="@{/post}" method="POST" th:object="${product}" enctype="multipart/form-data">
+            <input type="hidden" placeholder="id" th:field="*{id}"/><br><br>
+            <div class="input-group mb-3">
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label class="col-form-label" th:text="#{name}" style="padding-right: 150px" >Name</label>
+                        <input type="text" name="name" id="name" th:field="*{name}">
+                    </div>
+                    <div class="text-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}" >Opps, you need to input name correctly</div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label class="col-form-label" style="padding-right: 127px" th:text="#{category}">Category</label>
+                            <select name="category" id="category" th:field="*{category}">
+                                <option th:each="category:${categories}"  th:value="${category.name}" th:text="${category.name}"></option>
+                            </select>
+                            <a th:href="@{/addCategory}">
+                                <i class="fas fa-plus-circle"></i>
+                            </a>
+
+                    </div>
+
+                    <div class="text-danger" th:if="${#fields.hasErrors('category')}" th:errors="*{category}">Choose a category</div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label class="col-form-label" style="padding-right: 150px" th:text="#{detail}">Detail</label>
+                        <input type="text" name="detail" id="detail" th:field="*{detail}">
+                    </div>
+                    <div class="text-danger" th:if="${#fields.hasErrors('detail')}" th:errors="*{detail}" >Opps, you need to details</div>
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <label  class="col-sm-4 col-form-label" th:text="#{'Select a photo'}" >Select a photo</label>
+                <div class="col-sm-8" style="margin-left: -225px">
+                    <input type="file" class="form-control" th:field="*{photo}"/>
+                </div>
+                <div class="text-danger"  th:if="${#fields.hasErrors('photo')}" th:errors="*{photo}" >Upload Error</div>
+            </div>
+            <button class="btn btn-primary mt-3" type="submit">Submit</button>
+        </form>
+
+    </div>
+    <footer th:replace="template::footer"></footer>
+
+</body>
+</html>

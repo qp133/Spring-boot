@@ -111,7 +111,7 @@ public class ProductController {
         String name = request.getParameter("product");
         if (Objects.equals(name, "")) {
             model.addAttribute("product", productRepo.getAllProducts());
-            return "redirect:/listAll";
+            return "redirect:/listAllProducts";
         } else {
             Product product = productRepo.search("name");
             model.addAttribute("products", product);

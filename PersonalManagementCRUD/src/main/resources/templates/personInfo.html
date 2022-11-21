@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="template::Heading"></head>
+<body>
+<nav th:replace="template::menu"></nav>
+<br><br>
+<div class="container">
+  <div class="row my-5">
+    <div class="col-4 mx-auto">
+      <img th:src="@{/uploads/pic{id}.jpg(id=${person.id})}" alt="Photo" class="img-fluid">
+      <div class="d-flex justify-content-center">
+        <a th:href="@{/person/edit/{id}(id=${person.id})}">Edit</a>&nbsp;&nbsp;
+        <a th:href="@{/person/delete/{id}(id=${person.id})}">Delete</a><br>
+      </div>
+
+    </div>
+    <div class="col-2 mx-auto ">
+      <h6>Name</h6>
+      <p th:text="${person.name}"></p>
+    </div>
+    <div class="col-2 mx-auto ">
+      <h6>Job</h6>
+      <p th:text="${person.job}"></p>
+    </div>
+    <div class="col-2 mx-auto">
+      <h6>Birthdate</h6>
+      <p th:text="${person.birthdate}"></p>
+    </div>
+  </div>
+  <footer th:replace="template::footer"></footer>
+</div>
+</body>
+</html>

@@ -219,4 +219,34 @@ public class Tag {
 ### Câu 12:
 
 
+## Câu 13
+Thêm dependencies:
+```
+ <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+ </dependency>
+```
+Tạo class MyGenerater:
+```
+public class MyGenerator implements IdentifierGenerator {
+
+    @Override
+    public Serializable generate(SharedSessionContractImplementor sharedSessionContractImplementor, Object o) throws HibernateException {
+        return RandomStringUtils.random(10,true,true);
+    }
+}
+```
+Sửa cột id của Entity blog:
+```
+    @Id
+    @GeneratedValue(generator = "generator")
+    @GenericGenerator(name = "generator",
+            strategy = "com.example.testapi.MyGenerator")
+    @Column(name = "id", nullable = false)
+    private String id;
+```
+
+
 

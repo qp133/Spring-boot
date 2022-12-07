@@ -1,6 +1,8 @@
 package com.qp.blogapp.service;
 
+import com.qp.blogapp.entity.User;
 import com.qp.blogapp.request.LoginRequest;
+import com.qp.blogapp.security.CustomUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -15,7 +17,7 @@ import javax.servlet.http.HttpSession;
 public class AuthService {
     @Autowired
     private AuthenticationManager authenticationManager;
-    public String login(LoginRequest request, HttpSession session) {
+    public User login(LoginRequest request, HttpSession session) {
         try {
             //Tạo đối tượng xác thực
             UsernamePasswordAuthenticationToken token =
@@ -30,15 +32,15 @@ public class AuthService {
             //Lưu vào trong session
             session.setAttribute("MY_SESSION", authentication.getName());
 
-            return "Login Success";
+            CustomUserDetails userDetails = (CustomUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            return userDetails.getUser();
+
         }catch (AuthenticationException e) {
             throw new RuntimeException("Email or password incorrect.");
         }
     }
 
-    public String logout(HttpSession session) {
+    public void logout(HttpSession session) {
         session.invalidate();
-
-        return "logout success";
     }
 }

@@ -48,8 +48,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                    .antMatchers("/api/auth/**, /api/auth").permitAll() // Cho phép ai cũng có thể đi qua
-                    .antMatchers("/api/admin/**").hasRole("ADMIN") // Cần quyền admin mới được đi qua
+                    .antMatchers("/api/auth/**", "/api/v1/**").permitAll() // Cho phép ai cũng có thể đi qua
+                    .antMatchers("/api/admin/**").permitAll() // Cần quyền admin mới được đi qua
                 .and()
                     .exceptionHandling()
                     .authenticationEntryPoint(authenticationEntryPointCustom) // Xử lý authentication

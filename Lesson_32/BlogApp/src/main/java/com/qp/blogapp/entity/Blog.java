@@ -52,15 +52,22 @@ public class Blog {
     @JoinColumn(name = "user_id")
     private User user;
 
+//    @ManyToMany
+//    @JoinTable(name = "blog_category",
+//            joinColumns = @JoinColumn(name = "blog_id"),
+//            inverseJoinColumns = @JoinColumn(name = "category_id"))
+//    private Set<Category> categories = new LinkedHashSet<>();
+
+
+    @OneToMany(mappedBy = "blog", orphanRemoval = true, cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Set<Comment> comments = new LinkedHashSet<>();
+
     @ManyToMany
     @JoinTable(name = "blog_category",
             joinColumns = @JoinColumn(name = "blog_id"),
             inverseJoinColumns = @JoinColumn(name = "category_id"))
     private Set<Category> categories = new LinkedHashSet<>();
-
-    @OneToMany(mappedBy = "blog", orphanRemoval = true, cascade = CascadeType.ALL)
-    @JsonIgnore
-    private Set<Comment> comments = new LinkedHashSet<>();
 
     @PrePersist
     public void prePersist() {

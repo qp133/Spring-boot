@@ -1,10 +1,13 @@
 package com.qp.blogapp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
+import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Builder
 
@@ -23,6 +26,10 @@ public class Category {
     @Column(name = "name")
     private String name;
 
+    @ManyToMany(mappedBy = "categories")
+    @JsonIgnore
+    private Set<Blog> blogs = new LinkedHashSet<>();
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -36,6 +43,9 @@ public class Category {
         return getClass().hashCode();
     }
 
-
+    @PreRemove
+    public void preRemove() {
+        this.blogs.forEach( course -> course.setCategories(null));
+    }
 }
 

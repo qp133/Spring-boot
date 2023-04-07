@@ -35,7 +35,6 @@ public class Image {
     @JoinColumn(name = "users_id")
     private User users;
 
-
     @PrePersist
     public void prePersist() {
         uploadedAt = LocalDateTime.now();
